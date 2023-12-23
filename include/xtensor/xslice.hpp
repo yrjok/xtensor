@@ -1034,7 +1034,7 @@ namespace xt
     }
 
     template <class E, class SL>
-    using get_slice_type = typename detail::get_slice_type_impl<E, std::remove_reference_t<SL>>::type;
+    using get_slice_type = typename detail::get_slice_type_impl<E, std::remove_const_t<std::remove_reference_t<SL>>>::type;
 
     /*************************
      * xslice implementation *
